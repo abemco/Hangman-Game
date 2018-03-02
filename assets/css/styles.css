@@ -8,7 +8,7 @@ header {
     
 }
 
-.underscore {
+.underScore {
     border: 3px solid black;
     font-size: 100px;
     text-align: center;
@@ -19,7 +19,7 @@ header {
 
 .rightGuess {
     border: 3px solid black;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
     margin: 50px auto;
     height: 150px;
@@ -28,7 +28,7 @@ header {
 
 .wrongGuess {
     border: 3px solid black;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
     margin: 50px auto;
     height: 150px;
