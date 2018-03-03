@@ -1,6 +1,4 @@
-//GLOBAL VARIABLES
-//---------------------------------------
-// Used to record how many times a letter can be pressed
+// array of letters
 var doubleWord = ['a','b','c',
 				  'd','e','f',
 				  'g','h','i',
@@ -10,36 +8,31 @@ var doubleWord = ['a','b','c',
 				  's','t','u',
 				  'v','w','x',
 				  'y','z'];
-//Holds the all the words
+
+// Words   
 var wordBank =['amsterdam','paris','orlando','sydney','miami','barcelona','singapore'];
-//Holds choosenWord
 var choosenWord = "";
-//Holds letters in word
 var lettersInWord = [];
-//Holds number of blanks in word
 var numBlanks = 0;
-//Holds Blanks and successful guesses
 var blanksAndSuccesses =[];
-//Holds Wrong guesses
 var wrongLetters = [];
+
 //Counters
 var winCount = 0;
 var loseCount = 0;
 var guessesLeft = 9;
 var rightGuessCounter = 0;
+
 //FUNCTIONS
-//----------------------------------------
 function reset()
 {
-	//Chooses word randombly from the wordBank
+	
 	choosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-	//Splits the choosen word into individual letters
-	lettersInWord = choosenWord.split('');
-	//Get the number of blanks
-	numBlanks = lettersInWord.length;
+		lettersInWord = choosenWord.split('');
+		numBlanks = lettersInWord.length;
 	
 	//RESET
-	//===========================================================
+	
 	letterGuessed = 0;
 	rightGuessCounter = 0;
 	guessesLeft = 9;
@@ -59,15 +52,12 @@ function reset()
 }
 function startGame()
 {
-	//Chooses word randombly from the wordBank
+	
 	choosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-	//Splits the choosen word into individual letters
-	lettersInWord = choosenWord.split('');
-	//Get the number of blanks
-	numBlanks = lettersInWord.length;
+		lettersInWord = choosenWord.split('');
+		numBlanks = lettersInWord.length;
 	
 	//RESET
-	//===========================================================
 	rightGuessCounter = 0;
 	guessesLeft = 9;
 	wrongLetters =[];
@@ -82,7 +72,7 @@ function startGame()
 					  'v','w','x',
 					  'y','z'];
 
-	//Populate blanks
+	
 	for(var i = 0; i< numBlanks; i++)
 	{
 		blanksAndSuccesses.push('_');
@@ -95,7 +85,8 @@ function startGame()
 	document.getElementById('winCounter').innerHTML = winCount;
 	document.getElementById('lossCounter').innerHTML = loseCount;
 	document.getElementById('wrongGuesses').innerHTML = wrongLetters;
-	// Testing / Debugging
+	
+	// Testing
 	console.log(choosenWord);
 	console.log(lettersInWord);
 	console.log(numBlanks);
@@ -105,13 +96,12 @@ function startGame()
 function compareLetters(userKey)
 {
 				console.log('WORKING!');
-				//If user key exist in choosen word then perform this function 
 				if(choosenWord.indexOf(userKey) > -1)
 				{
-					//Loops depending on the amount of blanks 
+					
 					for(var i = 0; i < numBlanks; i++)
 					{
-						//Fills in right index with user key
+						
 						if(lettersInWord[i] === userKey)
 						{
 							rightGuessCounter++;
@@ -119,7 +109,7 @@ function compareLetters(userKey)
 							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
 						}	
 					}
-					//Test / Debug
+					//Testing
 					console.log(blanksAndSuccesses);
 				}
 				//Wrong Keys
@@ -130,7 +120,7 @@ function compareLetters(userKey)
 					//Changes HTML
 					document.getElementById('numGuesses').innerHTML = guessesLeft;
 					document.getElementById('wrongGuesses').innerHTML = wrongLetters;
-					//Test / Debug
+					//Testing
 					console.log('Wrong Letters = ' + wrongLetters);
 					console.log('Guesses left are ' + guessesLeft);
 				}
@@ -145,6 +135,7 @@ function winLose()
 	{
 		//Counts Wins 
 		winCount++;
+		
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
 		alert('You Win');
@@ -155,6 +146,7 @@ function winLose()
 	{
 		//Counts losses
 		loseCount++;
+		
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
 		alert('You Lose');
@@ -162,9 +154,8 @@ function winLose()
 	}
 }
 
-//MAIN PROCCESS
-//-------------------------------------------	
-//Initiates the Code
+
+//Initiates Main process Code
 startGame();
 
 document.onkeyup = function(event)

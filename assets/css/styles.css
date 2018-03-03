@@ -4,8 +4,8 @@ body {
 }
 
 .jumbotron {
-    background: gray;
-    color: white;
+    background: rgb(134, 39, 39);
+    color: black;
 }
 
 .container {
@@ -26,6 +26,10 @@ h1 {
     color: white;
 }
 
-
+.panel-box {
+    background: transparent;
+    color: white;
+    font-size: 40px;
+}
 
 

@@ -12,6 +12,10 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    
     
 </head>
 
@@ -19,7 +23,8 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Hangman Game</h1>
-			<p>Traveling the World</p>
+            <p><i class="fas fa-suitcase"></i> Traveling the World <i class="fas fa-suitcase"></i></p>
+            <p><i class="fas fa-star"></i> Click any letter to begin! <i class="fas fa-star"></i></p>
 	</div>
 
 	<div class="panel-default">
@@ -31,31 +36,33 @@
 		</div>
 	</div>
 	 
-	<div class="panel panel-default">
+	<div class="panel-box">
 	 	<div class="panel-body">
 	 		Wrong Guesses: <span id="wrongGuesses"></span>
 		</div>
 	</div>
 	
-	<div class="panel panel-default">
+	<div class="panel-box">
 		<div class="panel-body">
 			Guesses Left: <span id="numGuesses"></span>
 		</div>
 	</div>
 	
-	<div class="panel panel-default">
+	<div class="panel-box">
 		<div class="panel-body">
 			Win Counter: <span id="winCounter">0</span>
 		</div>
 	</div>
 	
-	<div class="panel panel-default">
+	<div class="panel-box">
 		<div class="panel-body">
 			Loss Counter:  <span id="lossCounter">0</span>
 		</div>
 	</div>
 	
 </div>
+
 <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 </html>
