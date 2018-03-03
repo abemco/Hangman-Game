@@ -1,35 +1,61 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hangman Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Link Reset -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+	<meta charset="UTF-8">
+	<title>Hangman Game</title>
+	
+	<!-- Bootstrap CDN -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Link CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css">
 
-    <!-- Link Javac=script -->
-    <script src="assets/javascript/game.js"></script>
-
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    
 </head>
+
 <body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Hangman Game</h1>
+			<p>Traveling the World</p>
+	</div>
 
-    <div class="container">
-        <header>
-            <h1>Hangman Game</h1>
-            <br>
-            <h3>Traveling the World</h3>
-        </header>
-        <br>
-        <div class="underScore">_ _ _ _</div>
-        <div class="rightGuess">Right Guess</div>
-        <div class="wrongGuess">Wrong Guess</div>
-    </div>
-
+	<div class="panel-default">
+		<div class="heading">
+			<h3 class="game-title">Word to Guess</h3>
+		</div>
+		<div class="panel-body">
+			<h2 id="wordToGuess">_ _ _ _ _ _ _</h2>
+		</div>
+	</div>
+	 
+	<div class="panel panel-default">
+	 	<div class="panel-body">
+	 		Wrong Guesses: <span id="wrongGuesses"></span>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Guesses Left: <span id="numGuesses"></span>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Win Counter: <span id="winCounter">0</span>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Loss Counter:  <span id="lossCounter">0</span>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

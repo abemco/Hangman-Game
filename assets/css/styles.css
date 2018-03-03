@@ -1,36 +1,31 @@
-header {
-    border: 3px solid black;
-    font-size: 20px;
-    text-align: center;
-    margin: 15px auto;
-    height: 300px;
-    width: 80%;
-    
+body {
+    background:url('../images/cities.jpg');
+    font-family: 'Bowlby One SC', cursive;
 }
 
-.underScore {
-    border: 3px solid black;
+.jumbotron {
+    background: gray;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.heading, h3, h2 {
+    color: white;
     font-size: 100px;
-    text-align: center;
-    margin: 50px auto;
-    height: 150px;
-    width: 80%;
 }
 
-.rightGuess {
-    border: 3px solid black;
-    font-size: 50px;
-    text-align: center;
-    margin: 50px auto;
-    height: 150px;
-    width: 80%;
+.game-title {
+    font-size: 70px;
 }
 
-.wrongGuess {
-    border: 3px solid black;
-    font-size: 50px;
-    text-align: center;
-    margin: 50px auto;
-    height: 150px;
-    width: 80%;
+h1 {
+    font-size: 100px;
+    color: white;
 }
+
+
+
+
